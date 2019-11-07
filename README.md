@@ -1,2 +1,2 @@
 # sample
-descrizione
+Questo è il primo repository gitHUB
