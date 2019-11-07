@@ -1,0 +1,10 @@
+Sistemare permessi utenti :
+
+select 'alter user [' + b.name + '] with login = [' + b.name + ']'
+from .dbo.sysmembers a
+join .dbo.sysusers b on a.memberuid = b.uid
+where b.islogin=1 and b.name <> 'dbo'
+group by b.name
+order by b.name
+
+Copy out the output and run against the same database and yoou should be fine.
